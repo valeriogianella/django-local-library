@@ -83,7 +83,7 @@ A rudimental login can be implemented in a html page as follows
 </body>
 </html>
 ````
-### Settings
+## Settings
 For date format: DATE_FORMAT in settings file, e.g. 
 ````
 DATE_FORMAT = "l j/n/Y"
