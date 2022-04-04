@@ -4,6 +4,9 @@ Local Library Website
 # notes on django
 ## Views
 
+### Forms
+Print form errors: print(form_name.errors)
+
 ### Model based views
 #### single model views
 
@@ -79,4 +82,10 @@ A rudimental login can be implemented in a html page as follows
 </form>
 </body>
 </html>
+````
+### Settings
+For date format: DATE_FORMAT in settings file, e.g. 
+````
+DATE_FORMAT = "l j/n/Y"
+USE_L10N = False (otherwise the date format is determined by this)
 ````
