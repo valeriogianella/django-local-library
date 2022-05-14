@@ -1,7 +1,12 @@
-# django_local_library
+# django-local-library
 Local Library Website
 
-# notes on django
+# Notes on django
+To start a project
+````
+django-admin startproject locallibrary
+````
+
 ## Views
 
 ### Forms
