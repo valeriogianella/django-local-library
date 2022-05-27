@@ -6,6 +6,23 @@ To start a project
 ````
 django-admin startproject locallibrary
 ````
+## Commands from the powershell
+### Migrations
+````
+python3 manage.py makemigrations
+python3 manage.py migrate
+````
+### Run the website locally
+More informations under [https://docs.djangoproject.com/en/4.0/ref/django-admin/#runserver]
+````
+python3 manage.py runserver
+````
+### Create a superuser
+````
+python3 manage.py createsuperuser
+````
+### Make queries from the command prompt
+Run servers - import object - run queries (? am I missing something ?)
 
 ## Views
 
