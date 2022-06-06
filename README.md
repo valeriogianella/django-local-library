@@ -111,3 +111,9 @@ For date format: DATE_FORMAT in settings file, e.g.
 DATE_FORMAT = "l j/n/Y"
 USE_L10N = False (otherwise the date format is determined by this)
 ````
+
+## Admin website
+Register in admin.py the models you want to access via the admin website
+````
+admin.site.register(ModelName)
+````
