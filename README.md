@@ -37,7 +37,7 @@ from django.views import generic
 ...
 class CustomClassName(generic.DetailView):
     model = ModelClass
-    template_name = "page_name.html"      # this valued defaults to "modelclass_detail.html"
+    template_name = "page_name.html"      # this value defaults to "modelclass_detail.html"
 ````
 in the urls page add the corresponding reference, i.e.
 ````
