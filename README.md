@@ -1,4 +1,4 @@
-# django-local-library
+# local-library
 Local Library Website
 
 # Notes on django
