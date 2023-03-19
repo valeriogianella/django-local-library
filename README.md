@@ -1,27 +1,35 @@
-# local-library
-Local Library Website
+#### Create virtual environment
+- to into the folder
+- create and activate the virtual environment (deactivate)
+```
+PS> python -m venv venv
+PS> venv\Scripts\activate
+PS> deactivate
+```
+#### Create and manage the requirements in the virtual environment ([pip_freeze](https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository))
+````
+python -m pip freeze > requirements.txt
+````
+## Notes on django
+- start a project
+````
+PS> django-admin startproject name_of_the_project
+````
+- migrations
+````
+PS> python3 manage.py makemigrations
+PS> python3 manage.py migrate
+````
+- run the website locally (more [info](https://docs.djangoproject.com/en/4.0/ref/django-admin/#runserver)), find the website under http://127.0.0.1:8000/
+````
+PS> python3 manage.py runserver
+````
+- create a superuser
+````
+PS> python3 manage.py createsuperuser
+````
+- query from the command prompt
 
-# Notes on django
-To start a project
-````
-django-admin startproject locallibrary
-````
-## Commands from the powershell
-### Migrations
-````
-python3 manage.py makemigrations
-python3 manage.py migrate
-````
-### Run the website locally
-More informations under [https://docs.djangoproject.com/en/4.0/ref/django-admin/#runserver]
-````
-python3 manage.py runserver
-````
-### Create a superuser
-````
-python3 manage.py createsuperuser
-````
-### Make queries from the command prompt
 Run servers - import object - run queries (? am I missing something ?)
 
 ## Views
