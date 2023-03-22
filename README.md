@@ -1,14 +1,19 @@
 #### Create virtual environment
-- to into the folder
-- create and activate the virtual environment (deactivate)
+- create, activate and deactivate the virtual environment
 ```
 PS> python -m venv venv
 PS> venv\Scripts\activate
 PS> deactivate
 ```
-#### Create and manage the requirements in the virtual environment ([pip_freeze](https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository))
+#### Create file with the list of the packages in the current environment (requirements) ([pip_freeze](https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository))
 ````
 python -m pip freeze > requirements.txt
+````
+#### Create file .env with environment variables, load them via
+````
+from dotenv import load_dotenv
+load_dotenv(BASE_DIR / '.env')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 ````
 ## Notes on django
 - start a project
