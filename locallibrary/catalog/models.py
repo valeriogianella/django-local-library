@@ -3,8 +3,7 @@ import uuid
 from datetime import date
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import User
-
+from accounts.models import CustomUser
 
 class Genre(models.Model):
     name = models.CharField(
@@ -65,8 +64,8 @@ class BookInstance(models.Model):
     book = models.ForeignKey("Book", on_delete=models.RESTRICT, null=True)
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
-    language = models.ForeignKey("Language", on_delete=models.RESTRICT, default="EN")
-    borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    language = models.ForeignKey("Language", on_delete=models.RESTRICT, default="EN") # type: ignore
+    borrower = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True)
 
     LOAN_STATUS = (
         ("m", "Maintenance"),
@@ -97,7 +96,7 @@ class BookInstance(models.Model):
         permissions = (("can_mark_returned", "Set book as returned"),)
 
     def __str__(self):
-        return f"{self.book.title}, {self.status_description()}, {self.due_back}, ({self.id})"
+        return f"{self.book.title}, {self.status_description()}, {self.due_back}, ({self.id})" # type: ignore
 
 
 class Author(models.Model):
